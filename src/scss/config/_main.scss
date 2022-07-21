@@ -1,0 +1,14 @@
+html {
+    font-size: $fs;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $white;
+    color:$black;
+    font-family: $font-family-1;
+    font-weight: $font-regular
+}

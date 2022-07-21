@@ -1,0 +1,26 @@
+$colors: (
+    primary: $primary,
+    primary-dark: $primary-dark,
+    secondary: $secondary,
+    positive: $positive,
+    warning: $warning,
+    negative: $negative,
+    active-cl: $active-cl,
+    white: $white,
+    black: $black,
+    snow: $snow,
+    grey: $grey,
+    pale-grey: $pale-grey,
+    light-grey: $light-grey,
+    dark-grey: $dark-grey
+);
+
+@each $key, $value in $colors {
+    .#{$key} {
+        color: $value;
+    }
+
+    .bg-#{$key} {
+        background-color: $value;
+    }
+}

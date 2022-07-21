@@ -1,0 +1,10 @@
+$font-icon: (
+    icon-font-size: $icon-font-size,
+    icon-font-size-sm: $icon-font-size-sm
+);
+
+@each $key, $value in $font-icon {
+    .#{$key} {
+        font-size: $value;
+    }
+}

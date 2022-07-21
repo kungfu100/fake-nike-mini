@@ -1,0 +1,2 @@
+create Home.html , listProduct.html, detail.html
+href="./listProduct?id${id_giay}"

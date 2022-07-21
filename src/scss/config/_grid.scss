@@ -1,0 +1,56 @@
+@mixin container($max-width: $media-lg) {
+    @if $max-width {
+        max-width: $max-width;
+    }
+    
+    padding-left: $spacing;
+    padding-right: $spacing;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    @include container;
+}
+
+.container-1160 {
+    @include container($max-width);
+}
+
+// row
+.row {
+    display: flex;
+    margin-right: $spacing-half;
+    margin-left: $spacing-half;
+}
+
+// column
+.col {
+    padding-left: $spacing-half;
+    padding-right: $spacing-half;
+}
+
+// break point
+@for $i from 1 through $column-count {
+    .col-#{$i} {
+        flex: 1 1 percentage($i / $column-count);
+    }
+}
+
+@media (min-width: $media-sm) {
+    @for $i from 1 through $column-count {
+        .col-#{$i}-sm {
+            flex: 1 1 percentage($i / $column-count);
+        }
+    }   
+}
+
+@media (min-width: $media-mid) {
+    @for $i from 1 through $column-count {
+        .col-#{$i}-mid {
+            flex: 1 1 percentage($i / $column-count);
+        }
+    }   
+}
+
+

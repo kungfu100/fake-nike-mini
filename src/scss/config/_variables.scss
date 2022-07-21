@@ -1,0 +1,94 @@
+//--------------------------
+//  COLORS
+//--------------------------
+$primary: #595CFF;
+$primary-dark: #383BE4;
+$secondary: #8C8EFF;
+
+$positive: #00CB6F;
+$warning: #FFBC2C;
+$negative: #EE7764;
+$active-cl: #595CFF;
+
+$white:#FFF;
+$black:#000;
+$snow:#F9F9FB;
+$grey:#AFB1BD;
+$pale-grey:#F0F0F5;
+$light-grey:#E6E6EB;
+$dark-grey:#82828B;
+
+//--------------------------
+//  FONTS
+//--------------------------
+$h1: px-to-rem(32);
+$h2: px-to-rem(28);
+$h3: px-to-rem(24);
+$h4: px-to-rem(18);
+$h5: px-to-rem(16);
+
+$fs: 14px;
+$fs-lg: px-to-rem(16);
+$fs-xl: px-to-rem(18);
+$fs-sm: px-to-rem(12);
+
+$font-family-1: 'Inter', sans-serif;
+
+$font-regular: 400;
+$font-medium: 500;
+$font-semiBold: 600;
+
+//--------------------------
+//  ICONS
+//--------------------------
+$icon-font-size: px-to-rem(24);
+$icon-font-size-sm: px-to-rem(20);
+
+
+//--------------------------
+//  SPACING
+//--------------------------
+$spacing: 10px;
+$spacing-2: 20px;
+$spacing-24: 24px;
+$spacing-half: ($spacing/2);
+
+//--------------------------
+//  BUTTON
+//--------------------------
+$btn-line-height: 17px;
+$btn-padding-v: 15px;
+
+//--------------------------
+//  FORM
+//--------------------------
+$form-padding: 13px;
+
+//--------------------------
+//  GRID
+//--------------------------
+$column-count:12;
+
+//--------------------------
+//  MEDIA QUERY
+//--------------------------
+$media-sm: 640px;
+$media-mid: 1280px;
+$media-lg: 1920px;
+
+//--------------------------
+//  BORDER
+//--------------------------
+$border-radius: 4px;
+$border-radius-lg: 8px;
+$border-radius-xl: 23px;
+
+//--------------------------
+//  TRANSITION
+//--------------------------
+$transition-linear: all 0.2s linear;
+
+//--------------------------
+//  MAX WIDTH
+//--------------------------
+$max-width: 1160px;

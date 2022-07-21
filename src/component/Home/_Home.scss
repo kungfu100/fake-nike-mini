@@ -1,0 +1,84 @@
+.home-headder {
+    
+    .header-top {
+        padding-top: $spacing;
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ---------- NAV -------------
+#nav {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+// ---------- BANNER -------------
+.banner {
+    margin-bottom: 80px;
+    
+    &__title {
+        position: absolute;
+        left: 80px;
+        bottom: 43px;
+    }
+}
+
+// ---------- CAROUSEL -------------
+.carousel {
+    padding-bottom: 60px;
+    
+    &__title {
+        padding-bottom: 50px;
+    }
+    
+    &__detail {
+        
+        .col {
+          padding-bottom: 14px;  
+        } 
+        
+        h3 {
+            margin-top: 20px;
+        }
+    }
+}
+
+.footer {
+    padding-top: 58px;
+    padding-bottom: 33px;
+    
+    .container-1160 > .row {
+        padding-bottom: 60px;
+        
+        @media (max-width: $media-sm) {
+            & {
+                text-align: center;
+                
+                & > .col {
+                    margin-bottom: $spacing-2;
+                }
+            }
+        }
+    }
+    
+    &__social{
+        font-size: $icon-font-size;
+        
+        & > a:not(:last-child) {
+            margin-right: $spacing-2;
+        }
+    }
+    
+    p {
+        margin-bottom: 12px;
+    }
+    
+    hr {
+        border: 1px solid $grey;
+        opacity: 0.2;
+        margin: 0;
+        margin-bottom: $spacing-2;
+    }
+}

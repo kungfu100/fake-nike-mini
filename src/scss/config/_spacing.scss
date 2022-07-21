@@ -1,0 +1,38 @@
+$spacings: (
+    spacing: $spacing,
+    spacing-2: $spacing-2,
+    spacing-half: $spacing-half
+);
+
+@each $key, $value in $spacings {
+    .#{$key} {
+        padding: $value;
+    }
+    
+    .#{$key}-h {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .#{$key}-v {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .#{$key}-top {
+        padding-top: $value;
+    }
+
+    .#{$key}-bottom {
+        padding-bottom: $value;
+    }
+
+    .#{$key}-left {
+        padding-left: $value;
+    }
+
+    .#{$key}-right {
+        padding-right: $value;
+    }
+
+}

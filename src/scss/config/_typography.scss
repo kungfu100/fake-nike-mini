@@ -1,0 +1,126 @@
+//-------------------
+// HEAD
+$heads: (
+    h1: $h1,
+    h2: $h2,
+    h3: $h3,
+    h4: $h4,
+    h5: $h5
+);
+
+%font-head {
+    font-weight: $font-medium;
+    margin-bottom: $spacing;
+}
+
+//-------------------
+// FONT SIZE
+$font-sizes: (
+    fs-lg: $fs-lg,
+    fs-xl: $fs-xl,
+    fs-sm: $fs-sm
+);
+
+@each $key, $value in $heads {
+    #{$key} {
+        font-size: $value;
+        @extend %font-head;
+    }
+}
+
+h2 {
+    font-weight: $font-semiBold;
+}
+
+@each $key, $value in $font-sizes {
+    .#{$key} {
+        font-size: $value;
+    }
+}
+
+p {
+    margin-bottom: $spacing-24;
+}
+
+//-------------------
+// FONT WEIGHT
+$font-weights: (
+    font-regular: $font-regular,
+    font-medium: $font-medium,
+    font-semiBold: $font-semiBold
+);
+
+@each $key, $value in $font-weights {
+    .#{$key} {
+        font-weight: $value;
+    }
+}
+
+//-------------------
+// TEXT
+.text {
+    
+    &-left {
+        text-align: left;
+    }
+    
+    &-right {
+        text-align: right;
+    }
+    
+    &-center {
+        text-align: center;
+    }
+    
+    &-upper {
+        text-transform: uppercase;
+    }
+    
+}
+
+//-------------------
+// LIST
+ul, ol {
+    margin-bottom: $spacing;
+    padding-left: $spacing;
+    
+    li {
+        margin-bottom: $spacing;
+    }
+    
+}
+
+// reset list 
+@mixin list-reset {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.list-reset {
+    @include list-reset;
+}
+
+//-------------------
+// LINK
+
+a, .link {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    
+    transition: $transition-linear;
+    
+    &:hover {
+        color: $primary;
+        transition: $transition-linear;
+    }
+    
+    &:focus {
+        outline: 1px solid $black;
+    }
+}

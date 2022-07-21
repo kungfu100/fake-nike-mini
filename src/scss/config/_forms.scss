@@ -1,0 +1,101 @@
+input {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0;
+}
+
+//-------------------
+// PLACEHOLDER
+@mixin placeholder {
+    &::-webkit-input-placeholder { 
+        @content;
+    }
+
+    &:-ms-input-placeholder { 
+        @content;    
+    }
+
+    &::placeholder {
+        @content;
+    }
+}
+
+//-------------------
+// FORM FOCUS
+@mixin form-focus {
+    outline: 0;
+    border: 1px solid $primary;
+    transition: $transition-linear;
+}
+
+//-------------------
+// FORM TEXT
+@mixin form-text( 
+    $color: $black,
+    $color-bg: $white,
+    $color-border: $light-grey,
+    $color-placeholder: $dark-grey
+) {
+    display: inline-block;
+    width: 100%;
+    padding: 12px $form-padding;
+    
+    font-family: $font-family-1;
+    font-size: $fs;
+
+    color: $color;
+    background-color: $color-bg;
+    
+    border:1px solid $color-border;
+    border-radius: $border-radius;
+    
+    transition: $transition-linear;
+    
+    @include placeholder {
+        color: $dark-grey;
+    }
+    
+    &:focus {
+        @include form-focus;
+    }
+}
+
+.form-text {
+    @include form-text;
+}
+
+//-------------------
+// INPUT GROUP
+@mixin input-group(
+    $color: $black,
+    $color-bg: $white,
+    $color-border: $light-grey
+) {
+    display:flex;
+    
+    color: $color;
+    background-color: $color-bg;
+    border:1px solid $color-border;
+    border-radius: $border-radius;
+    
+    &:focus-within {
+        @include form-focus;
+    }
+    
+}
+
+.input-group {
+    @include input-group;
+    
+    &-text {
+        @include form-text($color-bg: transparent);
+        
+        border: none;
+        
+        &:focus {
+            outline: 0;
+            border: none;
+        }
+    }
+}
+
