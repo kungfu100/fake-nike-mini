@@ -107,8 +107,8 @@ ul, ol {
 
 //-------------------
 // LINK
-
-a, .link {
+%link {
+    font-family: $font-family-1;
     color: $black;
     text-decoration: none;
     cursor: pointer;
@@ -123,4 +123,8 @@ a, .link {
     &:focus {
         outline: 1px solid $black;
     }
+}
+
+a, .link {
+    @extend %link;
 }

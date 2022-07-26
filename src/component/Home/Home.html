@@ -42,26 +42,40 @@
                 <div class="row flex-ai-c flex-jc-sb">
                     <div class="col">
                         <a href="./Home.html">
-                            <img src="../../img/logo.png" alt="logo">
+                            <img src="../../img/logo.png" alt="logo" class="logo">
                         </a>
                     </div>
 
-                    <ul class="col text-upper">
-                        <div class="row">
-                            <li class="col">
+                    <div class="col">
+                        <ul class="menu list-reset flex text-upper js-menu">
+<!--
+                            <li>
                                 <a href="#">men</a>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="#">women</a>
+
+                                <ul class="dropdown">
+                                    <li><a href="#">adidas</a></li>
+                                    <li><a href="#">nike</a></li>
+                                    <li><a href="#">van</a></li>
+                                </ul>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="#">adidas</a>
+
+                                <ul class="dropdown">
+                                    <li><a href="#">adidas</a></li>
+                                    <li><a href="#">nike</a></li>
+                                    <li><a href="#">van</a></li>
+                                </ul>
                             </li>
-                            <li class="col">
+                            <li>
                                 <a href="#">nike</a>
                             </li>
-                        </div>
-                    </ul>
+-->
+                        </ul>
+                    </div>
 
                     <div class="col">
                         <form autocomplete="off">
@@ -79,6 +93,44 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- HEADER WRAP -->
+            <div class="header-wrap flex flex-ai-c js-header-wrap">
+                <button id="btn-menu-exit" class="btn-circle btn--snow display-none">
+                    <i class="fa-solid fa-xmark icon-font-size" title="exit menu"></i>
+                </button>
+                <button id="btn-menu-open" class="btn-circle btn--snow">
+                    <i class="fa-solid fa-bars icon-font-size" title="menu"></i>
+                </button>
+                <ul id="menu" class="menu list-reset flex flex-jc-c text-upper display-none js-menu">
+<!--
+                    <li>
+                        <a href="#">men</a>
+                    </li>
+                    <li>
+                        <a href="#">women</a>
+
+                        <ul class="dropdown">
+                            <li><a href="#">adidas</a></li>
+                            <li><a href="#">nike</a></li>
+                            <li><a href="#">van</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">adidas</a>
+
+                        <ul class="dropdown">
+                            <li><a href="#">adidas</a></li>
+                            <li><a href="#">nike</a></li>
+                            <li><a href="#">van</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">nike</a>
+                    </li>
+-->
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -118,7 +170,7 @@
             </div>
 
             <div class="carousel__detail text-center">
-                <div class="row flex-wrap flex-jc-sa">
+                <div id="vans-converse" class="row flex-wrap flex-jc-sa">
                     <div class="col col-12 col-6-sm col-3-mid">
                         <a href="#">
                             <img src="../../img/empty_img.png" alt="" width="260" height="260">
@@ -168,7 +220,7 @@
             </div>
 
             <div class="carousel__detail text-center">
-                <div class="row flex-wrap flex-jc-sa">
+                <div id="feature" class="row flex-wrap flex-jc-sa">
                     <div class="col col-12 col-6-sm col-3-mid">
                         <a href="#">
                             <img src="../../img/empty_img.png" alt="" width="260" height="260">
@@ -202,10 +254,11 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer bg-pale-grey">
         <div class="container-1160">
-            <div class="row flex-wrap flex-jc-sb">
-                <div class="col col-12">
+            <div class="row flex-col flex-wrap flex-jc-sb text-center">
+                <div class="col">
                     <div class="footer__social">
                         <a href="#" title="facebook"><i class="fa-brands fa-facebook-square"></i></a>
                         <a href="#" title="twitter"><i class="fa-brands fa-twitter-square"></i></a>
@@ -214,7 +267,7 @@
                     </div>
                 </div>
 
-                <div class="col col-12">
+                <div class="col">
                     <ul class="text-upper font-semiBold">
                         <li><a href="#">Find A Store</a></li>
                         <li><a href="#">Become A Member</a></li>
@@ -223,9 +276,11 @@
                     </ul>
                 </div>
 
-                <div class="col col-12">
-                    <p class="text-upper font-semiBold">About Nike</p>
+                <div class="col">
                     <ul>
+                        <li>
+                            <p class="text-upper font-semiBold">About Nike</p>
+                        </li>
                         <li><a href="#">News</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Delivery</a></li>
@@ -239,6 +294,18 @@
             <div class="grey fs-sm">© Copyright, 2022</div>
         </div>
     </footer>
-</body>
+    
+    <!---------------------- 
+            SCRIPT 
+    ------------------------>
+    <script src="../../js/index.js"></script>
+    <script src="../../js/variables/API.js"></script>
+    <script src="../../js/fetchAPI/fetchAPI.js"></script>
+    <script src="../../js/component/menu.js"></script>
+    <script src="../../js/component/menuControl.js"></script>
+    <script src="../../js/component/carousel.js"></script>
+    <script src="../../js/component/vansConverse.js"></script>
+    <script src="../../js/component/feature.js"></script>
 
+</body>
 </html>

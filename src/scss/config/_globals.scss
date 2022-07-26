@@ -1,7 +1,7 @@
 //-------------------
 // DISPLAY
 @mixin display($type) {
-    display: $type;
+    display: $type !important;
 }
 
 .display-block {

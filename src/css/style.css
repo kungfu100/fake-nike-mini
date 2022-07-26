@@ -536,6 +536,7 @@ ul li, ol li {
 }
 
 a, .link {
+  font-family: "Inter", sans-serif;
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -550,11 +551,11 @@ a:focus, .link:focus {
 }
 
 .display-block {
-  display: block;
+  display: block !important;
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .flex {
@@ -839,12 +840,86 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.home-headder .header-wrap {
+  position: fixed;
+  z-index: 100;
+  top: 3vh;
+  transition: all 0.7s ease-in;
+  border-radius: 23px;
+}
+@media (min-width: 1280px) {
+  .home-headder .header-wrap {
+    display: none;
+  }
+}
+.home-headder .header-wrap .menu {
+  display: flex;
+}
+.home-headder .header-wrap .menu li:hover {
+  border-radius: 23px;
+}
+.home-headder .header-wrap .menu li .dropdown {
+  background-color: #F9F9FB;
+  border-radius: 23px;
+}
 
 #nav {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+#nav .logo {
+  object-fit: contain;
+  object-position: center;
+}
 
+.menu {
+  display: none;
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+@media (min-width: 1280px) {
+  .menu {
+    display: flex;
+  }
+}
+.menu ul {
+  padding: 0;
+}
+.menu li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+}
+.menu li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  z-index: 100;
+  background-color: #FFF;
+  display: none;
+}
+.menu li:hover {
+  background-color: #F0F0F5;
+}
+.menu li:hover > a {
+  color: #595CFF;
+}
+.menu li:hover .dropdown {
+  display: block;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .banner {
   margin-bottom: 80px;
 }
@@ -863,6 +938,13 @@ body {
 .carousel__detail .col {
   padding-bottom: 14px;
 }
+.carousel__detail a img {
+  transition: all 0.2s linear;
+}
+.carousel__detail a:hover img {
+  box-shadow: 0 0.5em 0.5em -0.4em #F9F9FB;
+  transform: translateY(-0.5em);
+}
 .carousel__detail h3 {
   margin-top: 20px;
 }
@@ -874,12 +956,16 @@ body {
 .footer .container-1160 > .row {
   padding-bottom: 60px;
 }
-@media (max-width: 640px) {
+.footer .container-1160 > .row > .col {
+  margin-bottom: 20px;
+}
+@media (min-width: 640px) {
   .footer .container-1160 > .row {
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
   }
   .footer .container-1160 > .row > .col {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 .footer__social {

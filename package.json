@@ -1,0 +1,28 @@
+{
+  "name": "nike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kungfu100/fake-nike-mini.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kungfu100/fake-nike-mini/issues"
+  },
+  "homepage": "https://github.com/kungfu100/fake-nike-mini#readme",
+  "devDependencies": {
+    "git-scripts": "^0.6.4",
+    "surge": "^0.23.1"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./ --domain fake-nike.surge.sh"
+    }
+  }
+}

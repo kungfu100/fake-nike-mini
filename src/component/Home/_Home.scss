@@ -1,10 +1,49 @@
+@mixin animation($name, $duration, $timing) {
+    animation: {
+        name: $name;
+        duration: $duration;
+        timing-function: $timing;
+    }
+}
+
+//-----------------------------------------------
 .home-headder {
-    
+
     .header-top {
         padding-top: $spacing;
         max-width: $max-width;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    //---- HEADER WRAP -----
+    .header-wrap {
+        position: fixed;
+        z-index: 100;
+        top: 3vh;
+ 
+        transition: all 0.7s ease-in;
+
+        border-radius: $border-radius-xl;
+
+        @media (min-width: $media-mid) {
+            & {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: flex;
+
+            & li:hover {
+                border-radius: $border-radius-xl;
+            }
+
+            & li .dropdown {
+                background-color: $snow;
+                border-radius: $border-radius-xl;
+            }
+        }
     }
 }
 
@@ -12,12 +51,76 @@
 #nav {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    .logo {
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+// ---------- MENU -------------
+.menu {
+    display: none;
+
+    @include animation(fade-out, 0.5s, ease-in);
+
+    @media (min-width: $media-mid) {
+        & {
+            display: flex;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    & li {
+        cursor: pointer;
+        position: relative;
+        padding: $spacing;
+
+        & .dropdown {
+            position: absolute;
+            top: 100%;
+            left: $spacing-2;
+            z-index: 100;
+
+            background-color: $white;
+            display: none;
+        }
+
+        &:hover {
+            background-color: $pale-grey;
+
+            & > a {
+                color: $primary;
+            }
+
+            .dropdown {
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 // ---------- BANNER -------------
 .banner {
     margin-bottom: 80px;
-    
+
     &__title {
         position: absolute;
         left: 80px;
@@ -28,17 +131,31 @@
 // ---------- CAROUSEL -------------
 .carousel {
     padding-bottom: 60px;
-    
+
     &__title {
         padding-bottom: 50px;
     }
-    
+
     &__detail {
-        
+
         .col {
-          padding-bottom: 14px;  
-        } 
-        
+            padding-bottom: 14px;
+        }
+         
+        a {
+            
+            img {
+                transition: $transition-linear;
+            }
+            
+            &:hover {
+                img {
+                    box-shadow: $box-shadow-snow;
+                    transform: translateY(-0.5em);
+                }
+            }
+        }
+
         h3 {
             margin-top: 20px;
         }
@@ -48,33 +165,39 @@
 .footer {
     padding-top: 58px;
     padding-bottom: 33px;
-    
+
     .container-1160 > .row {
         padding-bottom: 60px;
-        
-        @media (max-width: $media-sm) {
+
+        & > .col {
+            margin-bottom: $spacing-2;
+        }
+
+        @media (min-width: $media-sm) {
             & {
-                text-align: center;
-                
+                flex-direction: row;
+                text-align: left;
+
                 & > .col {
-                    margin-bottom: $spacing-2;
+                    margin-bottom: 0;
                 }
             }
+
         }
     }
-    
-    &__social{
+
+    &__social {
         font-size: $icon-font-size;
-        
+
         & > a:not(:last-child) {
             margin-right: $spacing-2;
         }
     }
-    
+
     p {
         margin-bottom: 12px;
     }
-    
+
     hr {
         border: 1px solid $grey;
         opacity: 0.2;
