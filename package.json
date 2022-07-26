@@ -19,10 +19,5 @@
   "devDependencies": {
     "git-scripts": "^0.6.4",
     "surge": "^0.23.1"
-  },
-  "git": {
-    "scripts": {
-      "pre-push": "surge --project ./ --domain fake-nike.surge.sh"
-    }
   }
 }
