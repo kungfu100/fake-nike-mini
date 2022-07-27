@@ -12,7 +12,12 @@ class Carousel {
         }
     }
 
-    sliceData() {
-        return this.carousels
+    sliceData(posStart) {
+        return this.carousels.slice(posStart, this.getPosEnd(posStart));
+    }
+    
+    getPosEnd(posStart) {
+        let posEnd = 4 + posStart; // get 4 element
+        return posEnd;
     }
 }

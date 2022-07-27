@@ -14,4 +14,6 @@ const activeStyleId = conditionClass => (id, className) => {
     }
 }
 
+const hasClass = (ele, className) => ele.classList.contains(className);
+
 const parseObj = obj => JSON.parse(obj);

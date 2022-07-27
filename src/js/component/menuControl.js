@@ -1,7 +1,5 @@
-const hasClass = (ele, className) => getId(ele).classList.contains(className);
-
 getId("btn-menu-open").addEventListener("click", function () {
-    if (hasClass("menu", "display-none")) {
+    if (hasClass(getId("menu"), "display-none")) {
         
         activeStyleId(false)("menu", "display-none");
         activeStyleId(false)("btn-menu-exit", "display-none");

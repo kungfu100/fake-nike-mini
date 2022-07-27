@@ -82,7 +82,6 @@ const addTitleMenu = (categories) => {
 getData(urlMenu)
     .then(res => res.json())
     .then(data => {
-        //console.log(data);
         categoriesMenu.addCategories(data.content);
 
         addTitleMenu(categoriesMenu.categories);
