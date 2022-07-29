@@ -6,33 +6,33 @@ $spacings: (
 
 @each $key, $value in $spacings {
     .#{$key} {
-        padding: $value;
+        padding: $value !important;
     }
     
     .#{$key}-h {
-        padding-left: $value;
-        padding-right: $value;
+        padding-left: $value !important;
+        padding-right: $value !important;
     }
 
     .#{$key}-v {
-        padding-top: $value;
-        padding-bottom: $value;
+        padding-top: $value !important;
+        padding-bottom: $value !important;
     }
 
     .#{$key}-top {
-        padding-top: $value;
+        padding-top: $value !important;
     }
 
     .#{$key}-bottom {
-        padding-bottom: $value;
+        padding-bottom: $value !important;
     }
 
     .#{$key}-left {
-        padding-left: $value;
+        padding-left: $value !important;
     }
 
     .#{$key}-right {
-        padding-right: $value;
+        padding-right: $value !important;
     }
 
 }

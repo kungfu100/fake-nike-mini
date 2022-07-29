@@ -1,0 +1,19 @@
+.product {
+    &-main {
+        $size: 100px;
+        
+        padding-top: $size;
+        padding-bottom: $size;
+        
+        // BOX FILTER
+        .box-filter {
+            margin-bottom: $spacing-2;   
+        }
+    }
+    
+    // PRODUCT LIST
+    &-list {
+        padding-top: $spacing-2;
+        margin-bottom: 2*$spacing-2;
+    }
+}    

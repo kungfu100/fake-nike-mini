@@ -1,12 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Nike</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/favicon.ico">
+
+    <!-- library -->
+    <link rel="stylesheet" href="./src/lib/fontawesome/css/all.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
+
 <body>
+    <!-- HEADER  -->
+    <header class="home-headder">
+        <div class="bg-pale-grey">
+            <div class="header-top">
+                <ul class="row flex-jc-e">
+                    <li class="col"><a href="#">Join us</a></li>
+                    <li class="col"> <a href="#">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-1160">
+
+            <!-- NAV -->
+            <nav id="nav">
+                <div class="row flex-ai-c flex-jc-sb">
+                    <div class="col">
+                        <a href="index.html">
+                            <img src="./src/img/logo.png" alt="logo" class="logo">
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <ul class="menu list-reset flex text-upper js-menu">
+<!--
+                            <li>
+                                <a href="#">men</a>
+                            </li>
+                            <li>
+                                <a href="#">women</a>
+
+                                <ul class="dropdown">
+                                    <li><a href="#">adidas</a></li>
+                                    <li><a href="#">nike</a></li>
+                                    <li><a href="#">van</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">adidas</a>
+
+                                <ul class="dropdown">
+                                    <li><a href="#">adidas</a></li>
+                                    <li><a href="#">nike</a></li>
+                                    <li><a href="#">van</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">nike</a>
+                            </li>
+-->
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <form autocomplete="off">
+                            <div class="input-group">
+                                <input class="input-group-text" type="text" placeholder="search" name="shoe">
+                                <button type="submit" class="btn-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col">
+                        <a href="#"><i class="fa-solid fa-cart-shopping icon-font-size"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HEADER WRAP -->
+            <div class="header-wrap flex flex-ai-c js-header-wrap">
+                <button id="btn-menu-exit" class="btn-circle btn--snow display-none">
+                    <i class="fa-solid fa-xmark icon-font-size" title="exit menu"></i>
+                </button>
+                <button id="btn-menu-open" class="btn-circle btn--snow">
+                    <i class="fa-solid fa-bars icon-font-size" title="menu"></i>
+                </button>
+                <ul id="menu" class="menu list-reset flex flex-jc-c text-upper display-none js-menu">
+<!--
+                    <li>
+                        <a href="#">men</a>
+                    </li>
+                    <li>
+                        <a href="#">women</a>
+
+                        <ul class="dropdown">
+                            <li><a href="#">adidas</a></li>
+                            <li><a href="#">nike</a></li>
+                            <li><a href="#">van</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">adidas</a>
+
+                        <ul class="dropdown">
+                            <li><a href="#">adidas</a></li>
+                            <li><a href="#">nike</a></li>
+                            <li><a href="#">van</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">nike</a>
+                    </li>
+-->
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER  -->
+    <section class="banner">
+        <div class="container-1160">
+            <div class="pos-relative">
+                <div class="banner__title white">
+                    <h1>Products</h1>
+                    <p>Show all Product</p>
+
+                    <a href="./src/component/ListProduct/ListProduct.html" class="btn btn--primary" target="_blank">
+                        More <i class="fa-solid fa-arrow-right icon-font-size-sm vertical-align-mid"></i>
+                    </a>
+                </div>
+
+                <a href="./src/component/ListProduct/ListProduct.html" target="_blank">
+                    <img src="./src/img/hero.jpg" alt="hero banner">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VANS_CONVERSE -->
+    <section class="carousel">
+        <div class="container-1160">
+            <div class="carousel__title">
+                <div class="row flex-jc-sb flex-ai-b">
+                    <div class="col">
+                        <h2>Vans converse</h2>
+                    </div>
+                    <div class="col">
+                        <button class="btn-circle btn--snow js-btn-prev"><i class="fa-solid fa-arrow-left-long icon-font-size-sm"></i></button>
+                        <button class="btn-circle btn--snow js-btn-next"><i class="fa-solid fa-arrow-right-long icon-font-size-sm"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel__detail text-center">
+                <div id="vans-converse" class="row flex-wrap flex-jc-sa">
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="carousel">
+        <div class="container-1160">
+            <div class="carousel__title">
+                <div class="row flex-jc-sb flex-ai-b">
+                    <div class="col">
+                        <h2>Feature</h2>
+                    </div>
+                    <div class="col">
+                        <button class="btn-circle btn--snow js-btn-prev"><i class="fa-solid fa-arrow-left-long icon-font-size-sm"></i></button>
+                        <button class="btn-circle btn--snow js-btn-next"><i class="fa-solid fa-arrow-right-long icon-font-size-sm"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel__detail text-center">
+                <div id="feature" class="row flex-wrap flex-jc-sa">
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-6-sm col-3-mid">
+                        <a href="#">
+                            <img src="./src/img/empty_img.png" alt="" width="260" height="260">
+                            <h3>title</h3>
+                            <p>price</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer bg-pale-grey">
+        <div class="container-1160">
+            <div class="row flex-col flex-wrap flex-jc-sb text-center">
+                <div class="col">
+                    <div class="footer__social">
+                        <a href="#" title="facebook"><i class="fa-brands fa-facebook-square"></i></a>
+                        <a href="#" title="twitter"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#" title="instagram"><i class="fa-brands fa-instagram-square"></i></a>
+                        <a href="#" title="youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <ul class="text-upper font-semiBold">
+                        <li><a href="#">Find A Store</a></li>
+                        <li><a href="#">Become A Member</a></li>
+                        <li><a href="#">Sign Up for Email</a></li>
+                        <li> <a href="#">Send Us Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <ul>
+                        <li>
+                            <p class="text-upper font-semiBold">About Nike</p>
+                        </li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="grey fs-sm">© Copyright, 2022</div>
+        </div>
+    </footer>
     
-    <a href="./src/component/Home/Home.html">Home</a>
-    
+    <!---------------------- 
+            SCRIPT 
+    ------------------------>
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/variables/API.js"></script>
+    <script src="./src/js/fetchAPI/fetchAPI.js"></script>
+    <script src="./src/js/component/menu.js"></script>
+    <script src="./src/js/component/menuControl.js"></script>
+    <script src="./src/js/component/carousel.js"></script>
+    <script src="./src/js/component/card.js"></script>
+    <script src="./src/js/component/carouselControl.js"></script>    
+    <script src="./src/js/component/vansConverse.js"></script>
+    <script src="./src/js/component/feature.js"></script>
+
 </body>
 </html>
