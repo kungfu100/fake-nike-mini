@@ -6,6 +6,21 @@
     }
 }
 
+%img-up {
+    a {
+        img {
+            transition: $transition-linear;
+        }
+
+        &:hover {
+            img {
+                box-shadow: $box-shadow-snow;
+                transform: translateY(-0.5em);
+            }
+        }
+    }
+}
+
 //-----------------------------------------------
 .home-headder {
 
@@ -21,7 +36,7 @@
         position: fixed;
         z-index: 100;
         top: 3vh;
- 
+
         transition: all 0.7s ease-in;
 
         border-radius: $border-radius-xl;
@@ -141,20 +156,8 @@
         .col {
             padding-bottom: 14px;
         }
-         
-        a {
-            
-            img {
-                transition: $transition-linear;
-            }
-            
-            &:hover {
-                img {
-                    box-shadow: $box-shadow-snow;
-                    transform: translateY(-0.5em);
-                }
-            }
-        }
+
+        @extend %img-up;
 
         h3 {
             margin-top: 20px;
@@ -162,6 +165,7 @@
     }
 }
 
+// ---------- FOOTER -------------
 .footer {
     padding-top: 58px;
     padding-bottom: 33px;
@@ -198,5 +202,3 @@
         margin-bottom: 12px;
     }
 }
-
-

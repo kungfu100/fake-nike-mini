@@ -65,6 +65,40 @@ input {
 }
 
 //-------------------
+// FORM SELECT
+@mixin form-select( 
+    $color: $black,
+    $color-bg: $white,
+    $color-border: $light-grey,
+    $color-placeholder: $dark-grey
+) {
+    display: inline-block;
+    
+    font-family: $font-family-1;
+    font-size: $fs;
+
+    color: $color;
+    background-color: $color-bg;
+    
+    border:1px solid $color-border;
+    border-radius: $border-radius;
+    
+    transition: $transition-linear;
+    
+    option {
+        font-size: $fs;
+    }
+
+    &:focus {
+        @include form-focus;
+    }
+}
+
+.form-select {
+    @include form-select;
+}
+
+//-------------------
 // INPUT GROUP
 @mixin input-group(
     $color: $black,

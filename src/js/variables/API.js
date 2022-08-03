@@ -12,4 +12,4 @@ const PARAM_PAGE_INDEX = "pageIndex=";
 const PARAM_PAGE_SIZE = "pageSize=";
 const PARAM_KEYWORD = "keywords=";
 
-const pageSize = 10;
+const pageSizeDefault = 4;

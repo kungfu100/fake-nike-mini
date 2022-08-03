@@ -88,15 +88,15 @@
             <div class="box-filter">
                 <div class="flex flex-jc-sb flex-ai-c">
                     <div>
-                        <select id="sort">
-                            <option selected>Sort By</option>
+                        <select id="sort-price" class="form-select">
+                            <option value="" selected disabled>Sort By</option>
                             <option value="high-low">Price: High-Low</option>
                             <option value="low-high">Price: Low-Hight</option>
                         </select>
                     </div>
 
                     <div>
-                        <span class="fs-lg">24 items</span>
+                        <span id="items" class="fs-lg">0 items</span>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
 
             <!-- PRODUCT LIST -->
             <div class="product-list text-center">
-                <div class="row flex-wrap flex-jc-sa">
+                <div id="products" class="row flex-wrap flex-jc-sa">
                     <div class="col col-12 col-6-sm col-3-mid">
                         <a href="#">
                             <img src="../../img/empty_img.png" alt="" width="260" height="260">
@@ -139,7 +139,7 @@
             
             <!-- MORE BUTTON -->
             <div class="text-center">
-                <buton class="btn btn--primary spacing-2-h">Show More</buton>
+                <div id="more" class="btn btn--primary spacing-2-h" tabindex="0" role="button">Show More</div>
             </div>
         </div>
     </main>
@@ -185,15 +185,16 @@
         </div>
     </footer>
 
-    <!---------------------- 
-            SCRIPT 
-    ------------------------>
+    <!-- SCRIPT -->
     <script src="../../js/index.js"></script>
     <script src="../../js/variables/API.js"></script>
     <script src="../../js/fetchAPI/fetchAPI.js"></script>
     <script src="../../js/component/menu.js"></script>
     <script src="../../js/component/menuControl.js"></script>
     <script src="../../js/component/card.js"></script>
+    <script src="../../js/component/products.js"></script>
+    <script src="../../js/component/sortControl.js"></script>
+    <script src="../../js/component/listProduct.js"></script>
 
 </body>
 

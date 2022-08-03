@@ -9,11 +9,19 @@
         .box-filter {
             margin-bottom: $spacing-2;   
         }
+        
+        .btn.btn--primary {
+            &:hover, &:focus {
+                border: 1px solid $primary;
+            }
+        }
     }
     
     // PRODUCT LIST
     &-list {
         padding-top: $spacing-2;
         margin-bottom: 2*$spacing-2;
+        
+        @extend %img-up;
     }
 }    

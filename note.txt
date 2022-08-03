@@ -1,2 +1,8 @@
 create Home.html , listProduct.html, detail.html
 href="./listProduct?id${id_giay}"
+
+<a href="./listProduct.html?id=Nike" target="_blank">Nike</a>
+    <a href="./listProduct.html?id=ADIAS" target="_blank">Nike</a>
+var url = window.location.href;
+console.log(url.split('=')[1]);
+let id=url.split('=')[1]

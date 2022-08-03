@@ -782,6 +782,25 @@ input {
   transition: all 0.2s linear;
 }
 
+.form-select {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #000;
+  background-color: #FFF;
+  border: 1px solid #E6E6EB;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+.form-select option {
+  font-size: 14px;
+}
+.form-select:focus {
+  outline: 0;
+  border: 1px solid #595CFF;
+  transition: all 0.2s linear;
+}
+
 .input-group {
   display: flex;
   color: #000;
@@ -839,6 +858,14 @@ body {
   color: #000;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+
+.carousel__detail a img, .product-list a img {
+  transition: all 0.2s linear;
+}
+.carousel__detail a:hover img, .product-list a:hover img {
+  box-shadow: 0 0.5em 0.5em -0.4em #F9F9FB;
+  transform: translateY(-0.5em);
 }
 
 .home-headder .header-top {
@@ -945,13 +972,6 @@ body {
 .carousel__detail .col {
   padding-bottom: 14px;
 }
-.carousel__detail a img {
-  transition: all 0.2s linear;
-}
-.carousel__detail a:hover img {
-  box-shadow: 0 0.5em 0.5em -0.4em #F9F9FB;
-  transform: translateY(-0.5em);
-}
 .carousel__detail h3 {
   margin-top: 20px;
 }
@@ -991,6 +1011,9 @@ body {
 }
 .product-main .box-filter {
   margin-bottom: 20px;
+}
+.product-main .btn.btn--primary:hover, .product-main .btn.btn--primary:focus {
+  border: 1px solid #595CFF;
 }
 .product-list {
   padding-top: 20px;
