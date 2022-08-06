@@ -17,3 +17,13 @@ const activeStyleId = conditionClass => (id, className) => {
 const hasClass = (ele, className) => ele.classList.contains(className);
 
 const parseObj = obj => JSON.parse(obj);
+
+const oLocation = () => {
+    let path = window.location.pathname;
+    let search = window.location.search;
+    
+    return {
+        path,
+        search
+    }
+}

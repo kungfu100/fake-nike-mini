@@ -1,8 +1,12 @@
 class Product {
     constructor() {
         this.products = [];
-        this.newProducts = [];
+        this.sLocation = oLocation().search;
         this.isSorted = false;
+    }
+    
+    getCategoryId() {
+        return this.sLocation.split("=").at(-1);
     }
     
     isArr(arr) {
@@ -32,7 +36,6 @@ class Product {
         })
                 
         this.products = [...newProducts];
-        this.newProducts = [];
         this.isSorted = true;
         
         return newProducts;
@@ -42,20 +45,12 @@ class Product {
         let sortedProducts = this.sortPriceProducts();
         if(this.isSorted) {
             this.products = [...sortedProducts.reverse()];
-//            return sortedProducts.reverse();
         }
     }
     
-    spliceItems(page=0) {
-        let splicedItems = [...this.products].splice(page, 4);
-                
-        this.newProducts = [
-            ...this.newProducts,
-            ...splicedItems
-        ]        
-                
-        console.log(this.newProducts);
-        
-        return this.newProducts;
+    spliceItems(page=4) {
+        let splicedItems = [...this.products].splice(0, page);
+                        
+        return splicedItems;
     }
 }

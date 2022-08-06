@@ -11,7 +11,7 @@
         }
         
         .btn.btn--primary {
-            &:hover, &:focus {
+            &:hover, &:active {
                 border: 1px solid $primary;
             }
         }

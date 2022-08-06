@@ -22,9 +22,10 @@ const isEmptyArr = (fun) => (obj) => fun(obj).length > 0 ? true : false;
 // CREATE LINK
 const createLink = valueId => {
     let a = document.createElement("a");
-    a.textContent = valueId;
-
-    a.setAttribute("href", "#");
+    let urlCategoryId = `./src/component/ListProduct/ListProduct.html?categoryId=${valueId}`;
+    a.textContent = valueId.replace("_", " ");
+        
+    a.setAttribute("href", urlCategoryId);
 
     return a;
 }

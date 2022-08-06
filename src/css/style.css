@@ -1012,7 +1012,7 @@ body {
 .product-main .box-filter {
   margin-bottom: 20px;
 }
-.product-main .btn.btn--primary:hover, .product-main .btn.btn--primary:focus {
+.product-main .btn.btn--primary:hover, .product-main .btn.btn--primary:active {
   border: 1px solid #595CFF;
 }
 .product-list {

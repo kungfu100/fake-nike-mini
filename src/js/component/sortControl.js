@@ -6,16 +6,17 @@ const sortData = (data, idSelect, outEle) => {
             valueSort = this.options[this.selectedIndex].value;
 
             if (valueSort === "high-low") {
-                //createCard(data.reversePriceProducts(), outEle);
                 data.reversePriceProducts();
                 createCard(data.spliceItems(), outEle);
             }
             if (valueSort === "low-high") {
                 data.sortPriceProducts();
                 createCard(data.spliceItems(), outEle);
-            }
+            }            
             
-            data
+            if(hasClass(getId("more"), "display-none")) {
+                getId("more").classList.remove("display-none");
+            }
         })
     } else console.log("no data to sort");
 

@@ -1,17 +1,11 @@
 const listProduct = new Product();
-let urlProduct = `${URL_BASE}`;
+let urlProduct = "";
 
-const moreData = data => {
-    let page = 0;
-
-    getId("more").addEventListener("click", function () {
-        if (data.isSorted) page = 0;
-        else {
-            page += 4;
-            createCard(data.spliceItems(page), "products");
-        }
-    })
-}
+const getURLProduct = (() => {
+    urlProduct = listProduct.sLocation 
+        ? `${URL_BASE}${PATH_CATEGORY}?${PARAM_CATEGORY}${listProduct.getCategoryId()}` 
+        : URL_BASE;
+})();
 
 getData(urlProduct)
     .then(res => res.json())
