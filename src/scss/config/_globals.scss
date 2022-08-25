@@ -1,7 +1,15 @@
 //-------------------
 // DISPLAY
-@mixin display($type) {
+@mixin display($type) { 
     display: $type !important;
+}
+
+@mixin display-media($width: 640px, $type: block) {
+    @media (min-width: $width) {
+        & {
+            @include display($type);
+        }
+    }
 }
 
 .display-block {
@@ -10,6 +18,14 @@
 
 .display-none {
     @include display(none);
+}
+
+.display-block-640 {
+    @include display-media;
+}
+
+.display-none-640 {
+    @include display-media($type: none);
 }
 
 //-------------------

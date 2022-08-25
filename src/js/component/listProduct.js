@@ -8,7 +8,6 @@ const getURLProduct = (() => {
 })();
 
 getData(urlProduct)
-    .then(res => res.json())
     .then(data => {
 
         listProduct.addProducts(data.content);

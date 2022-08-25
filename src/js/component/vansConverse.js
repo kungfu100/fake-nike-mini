@@ -2,7 +2,6 @@ const vansConverse = new Carousel("VANS_CONVERSE");
 const urlVansConverse = `${URL_BASE}${PATH_CATEGORY}?${PARAM_CATEGORY}${vansConverse.nameId}`
 
 getData(urlVansConverse)
-    .then(res => res.json())
     .then(data => {
         vansConverse.addData(data.content);
 

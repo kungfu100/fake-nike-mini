@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Nike Product</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
+
+    <!-- library -->
+    <link rel="stylesheet" href="../../lib/fontawesome/css/all.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header class="home-headder">
+        <div class="bg-pale-grey">
+            <div class="header-top">
+                <ul class="row flex-jc-e">
+                    <li class="col"><a href="#">Join us</a></li>
+                    <li class="col"> <a href="#">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-1160">
+
+            <!-- NAV -->
+            <nav id="nav">
+                <div class="row flex-ai-c flex-jc-sb">
+                    <div class="col">
+                        <a href="../../../index.html">
+                            <img src="../../img/logo.png" alt="logo" class="logo">
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <ul class="menu list-reset flex text-upper js-menu">
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <form>
+                            <div class="input-group">
+                                <input class="input-group-text" type="text" placeholder="search" name="shoe">
+                                <button type="submit" class="btn-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col">
+                        <a href="#"><i class="fa-solid fa-cart-shopping icon-font-size"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HEADER WRAP -->
+            <div class="header-wrap flex flex-ai-c js-header-wrap">
+                <button id="btn-menu-exit" class="btn-circle btn--snow display-none">
+                    <i class="fa-solid fa-xmark icon-font-size" title="exit menu"></i>
+                </button>
+                <button id="btn-menu-open" class="btn-circle btn--snow">
+                    <i class="fa-solid fa-bars icon-font-size" title="menu"></i>
+                </button>
+                <ul id="menu" class="menu list-reset flex flex-jc-c text-upper display-none js-menu">
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-detail">
+        <div class="container-1160">
+            <div class="row flex-wrap">
+                <div class="col col-12 col-6-sm">
+                    <!-- INFOR -->
+                    <div class="detail__infor display-none-640 js-detail-infor">
+                        <h1>Product Name</h1>
+                        <p>Price</p>
+                    </div>
+
+                    <div id="detailImg" class="detail__img">
+                        <img src="../../img/empty_img.png" alt="name shoe" width="568" height="568">
+                    </div>
+                </div>
+
+                <div class="col col-12 col-6-sm">
+                    <!-- INFOR -->
+                    <div class="detail__infor display-none display-block-640 js-detail-infor">
+                        <h1>Product Name</h1>
+                        <p>Price</p>
+                    </div>
+
+                    <!-- FORM WRAP -->
+                    <div class="form-wrap">
+                        <form id="detailForm" method="POST">
+                            <!-- SIZE -->
+                            <fieldset>
+                                <legend class="fs-lg">Select Size</legend>
+
+                                <div id="detailSize" class="flex flex-wrap">
+                                    <div class="input-group-radio">
+                                        <input type="radio" name="size" id="36" value="36">
+                                        <label for="36" tabindex="-1">36</label>
+                                    </div>
+                                    <div class="input-group-radio">
+                                        <input type="radio" name="size" id="37" value="37">
+                                        <label for="37" tabindex="-1">37</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <p id="detailError" class="error"></p>
+
+                            <button id="addToBag" class="btn btn--primary full-width">Add to Bag</button>
+                        </form>
+                    </div>
+
+                    <div id="detailDescription">
+                        <p>The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement</p>
+                        <p>The midsole contains 20% more Boost for an amplified Boost feeling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer bg-pale-grey">
+        <div class="container-1160">
+            <div class="row flex-col flex-wrap flex-jc-sb text-center">
+                <div class="col">
+                    <div class="footer__social">
+                        <a href="#" title="facebook"><i class="fa-brands fa-facebook-square"></i></a>
+                        <a href="#" title="twitter"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#" title="instagram"><i class="fa-brands fa-instagram-square"></i></a>
+                        <a href="#" title="youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <ul class="text-upper font-semiBold">
+                        <li><a href="#">Find A Store</a></li>
+                        <li><a href="#">Become A Member</a></li>
+                        <li><a href="#">Sign Up for Email</a></li>
+                        <li> <a href="#">Send Us Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <ul>
+                        <li>
+                            <p class="text-upper font-semiBold">About Nike</p>
+                        </li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="grey fs-sm">© Copyright, 2022</div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="../../js/index.js"></script>
+    <script src="../../js/variables/API.js"></script>
+    <script src="../../js/fetchAPI/fetchAPI.js"></script>
+    <script src="../../js/component/menu.js"></script>
+    <script src="../../js/component/menuControl.js"></script>
+    <script src="../../js/component/card.js"></script>
+    <script src="../../js/component/detail.js"></script>
+    <script src="../../js/component/detailData.js"></script>    
+
+</body></html>

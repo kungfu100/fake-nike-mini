@@ -1,0 +1,2 @@
+
+const detailProduct = new Detail();

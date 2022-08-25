@@ -1,4 +1,4 @@
 const getData = (url) => {
-    return fetch(url)
+    return fetch(url).then(res => res.json());
 }
 

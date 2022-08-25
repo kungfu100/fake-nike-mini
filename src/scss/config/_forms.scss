@@ -133,3 +133,66 @@ input {
     }
 }
 
+//-------------------
+// INPUT GROUP RADIO
+@mixin input-group-radio(
+    $color: $black,
+    $color-bg: $white,
+    $color-border: $light-grey
+) {
+    position: relative;
+    
+    &:not(&:last-child) {
+        margin-right: $spacing;
+    }
+    
+    & > input[type="radio"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        
+        &:checked {
+            outline: 0;
+        }
+        
+        &:checked, &:focus + label {
+            box-shadow: $box-shadow-primary;
+        }
+    }
+    
+    & > label {
+        $size: 46px;
+        
+        display: inline-block;
+        width: 120px;
+        height: $size;
+        line-height: $size;
+        font-weight: $font-medium;
+        text-align: center;
+        
+        color: $color;
+        background-color: $color-bg;
+        border:1px solid $color-border;
+        border-radius: $border-radius;
+        
+        cursor: pointer;
+        transition: $transition-linear;
+        
+        &:hover {
+            @include form-focus
+        }
+    }
+}
+
+.input-group-radio {
+    @include input-group-radio;
+}
+
+//-------------------
+// STATE
+.error {
+    color: $negative;
+}
+
